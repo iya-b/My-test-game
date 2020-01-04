@@ -14,8 +14,6 @@ public class WayPointEnemy : MonoBehaviour
     [SerializeField]
     public Transform[] wayPoint;
 
-
-
     private int index = 0;
     // Start is called before the first frame update
     void Start()
