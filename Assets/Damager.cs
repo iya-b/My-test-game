@@ -23,6 +23,7 @@ public class Damager : MonoBehaviour
      [SerializeField]
     private GameObject explosionPrefab;
 
+    private float radius;
     private void OnCollisionEnter(Collision collision)
     {
         if (!GameObject.Equals(collision.gameObject, Owner))
@@ -33,7 +34,7 @@ public class Damager : MonoBehaviour
                 target.Hit(Damage);
             }
 
-            Destroy(gameObject);
+             Destroy(gameObject);
             if (explosionPrefab != null)
             {
                 Explosion.Create(transform.position, explosionPrefab);

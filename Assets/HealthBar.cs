@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour
         healthBar = gameObject.GetComponent<Image>();
         if (owner.gameObject.GetComponent<CharacterController>() != null)
         {
-            rotateBar = false;
+            rotateBar = true;
         }
     }
 
@@ -31,7 +31,6 @@ public class HealthBar : MonoBehaviour
         healthBar.fillAmount = Mathf.InverseLerp(0.0f, owner.hitPoints, owner.hitPointsCurrent);
         if (rotateBar)
         {
-            transform.forward = Camera.main.transform.position - transform.position;
             transform.forward = Camera.main.transform.forward;
         }
     }
